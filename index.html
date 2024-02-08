@@ -19,12 +19,20 @@
 <body>
 
   <!-- Display the map and title with HTML division tags  -->
-  <div id="map-title">EDIT map title</div>
+  <div id="map-title">My life in Dublin</div>
   <div id="map"></div>
 
   <!-- Create the interactive map content with JavaScript (.js) -->
   <script>
+var map = L.map('map').setView([51.505, -0.09], 13);
 
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker([51.5, -0.09]).addTo(map)
+    .bindPopup('A pretty CSS popup.<br> Easily customizable.')
+    .openPopup();
   /* Set up the initial map center and zoom level */
   var map = L.map('map', {
     center: [41.77, -72.69], // EDIT coordinates to re-center map
