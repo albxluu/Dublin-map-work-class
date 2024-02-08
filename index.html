@@ -21,7 +21,6 @@
   <!-- Display the map and title with HTML division tags  -->
   <div id="map-title">My life in Dublin</div>
   <div id="map"></div>
-#map { height: 180px; }
   <!-- Create the interactive map content with JavaScript (.js) -->
   <script>
 var map = L.map('map').setView([51.505, -0.09], 13);
@@ -42,6 +41,7 @@ L.marker([51.5, -0.09]).addTo(map)
     zoom: 12,  // EDIT from 1 (zoomed out) to 18 (zoomed in)
     scrollWheelZoom: false
   });
+    #map { height: 180px; }
 
   /* display basemap tiles -- see others at https://leaflet-extras.github.io/leaflet-providers/preview/ */
   L.tileLayer(
