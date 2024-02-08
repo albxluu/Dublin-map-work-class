@@ -36,6 +36,11 @@
         // Add a marker for a specific location (e.g., Dublin City Centre)
         var marker = L.marker([53.349805, -6.26031]).addTo(map);
         marker.bindPopup("<b>Dublin City Centre</b>").openPopup();
+    // Prompt user for marker label
+        var label = prompt("Enter the label for the marker:");
+
+        // Add a marker for a specific location (e.g., Dublin City Centre)
+        addMarkerWithText(53.349805, -6.26031, "<b>" + label + "</b>");
 
   </script>
 </body>
