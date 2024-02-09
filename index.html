@@ -18,7 +18,7 @@
 </head>
 <body>
 
-
+  <!-- Display the map and title with HTML division tags  -->
   <div id="map-title">My life in Dublin</div>
   <div id="text"></div>
   <p> I lived in Dublin for a year when I was 15 and 16 years old, made a lot of memories and friends there, and I would loove to show you how my life there usually went. </p>
@@ -37,7 +37,7 @@
         // Function to add marker with user input text
         function addMarkerWithText(lat, lng, text) {
             var marker = L.marker([lat, lng]).addTo(map);
-            marker.
+            marker.bindPopup(text).openPopup();
         }
 
         // Prompt for marker label
@@ -45,6 +45,6 @@
 
         // Add a marker for St Tiernans Community School
         addMarkerWithText(53.2866, -6.2411, "<b>" + label + "</b>");
-  </script>
+
 </body>
 </html>
